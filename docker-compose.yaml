@@ -1,0 +1,9 @@
+services:
+  slight-server:
+    image: slight-server
+    platform: wasi/wasm
+    build:
+      context: .
+    runtime: io.containerd.slight.v1
+    ports:
+      - 3000:3000
